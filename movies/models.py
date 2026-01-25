@@ -1,5 +1,7 @@
 # movies/models.py
 from django.db import models
+from django.utils import timezone
+
 
 # Create your models here.
 class Genre(models.Model):
@@ -10,4 +12,5 @@ class Movie(models.Model):
     release_year = models.IntegerField()
     number_in_stock = models.IntegerField()
     daily_rate = models.FloatField()
-    genre = models.ForeignKey(Genre, on_delete=models.CASCADE) # this means that if the Genre table is deleted then all the Movies referencing it will also be deleted.
+    genre = models.ForeignKey(Genre, on_delete=models.CASCADE)
+    date_created = models.DateTimeField(default=timezone.now)
