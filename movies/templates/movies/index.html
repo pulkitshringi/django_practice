@@ -1,12 +1,8 @@
 <!--movies/templates/movies/index.html-->
-{% load static %}         <!-- DON'T FORGET TO ADD THIS --> 
-<!DOCTYPE html>
-<head>
-    <title>Movies List</title>
-    <link rel="stylesheet" href="{% static 'movies/style.css' %}">
-</head>
-<body>
-    <table>
+{% extends 'movies/base.html' %}
+
+{% block content %}
+ <table class="table table-bordered table-hover">
         <thead>
             <tr>
                 <th>Title</th>
@@ -26,5 +22,4 @@
             {% endfor %}
         </tbody>
     </table>
-</body>
-</html>
+{% endblock %}
