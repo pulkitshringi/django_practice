@@ -8,4 +8,5 @@ class MovieResource(ModelResource):
     class Meta: # tastypie looks for this meta details
         queryset = Movie.objects.all()
         resource_name = 'movies' # urls will automatically be created using this name
+        excludes = ["date_created"]
 
