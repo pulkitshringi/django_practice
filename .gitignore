@@ -3,8 +3,10 @@
 *.pyc
 
 # Database
+db.sqlite3
 
 # Local environment/IDE
 .vscode/
 
 # Packaging (optional to hide)
+Pipfile.lock
